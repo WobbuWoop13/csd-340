@@ -1,0 +1,65 @@
+/* Kyle Marlia-Conner */
+/* 1/19/2025 */
+/* Assignment 3.3 */
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.left-div, .right-div {
+  width: 45%;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 15px;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: upper-roman;
+  padding: 10px;
+  border: 1px dashed red;
+  border-radius: 15px;
+}
+
+.bottom-div {
+  width: 100%;
+  margin-top: 60px;
+  float: right;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}

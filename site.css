@@ -1,0 +1,39 @@
+/* Kyle Marlia-Conner */
+/* 1/19/2025 */
+/* Assignment 3.2 */
+
+/* Container styling */
+#container {
+    margin: 50px 100px;
+}
+
+/* Header styling */
+h1, h2, h3, h4 {
+    background-color: #A5B1EF; 
+    color: #322306; 
+    border: 1px solid #E19703; 
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Anchor links */
+a {
+    color: #322306; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E19703; 
+    text-decoration: underline; 
+}
+
+a:visited {
+    color: #6B5D3A;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #A5B1EF;
+    color: #322306;
+}
