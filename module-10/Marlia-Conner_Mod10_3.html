@@ -1,0 +1,57 @@
+<!-- Kyle Marlia-Conner -->
+<!-- 2/23/2025 -->
+<!-- Assignment 10.3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin-left: 20px;
+        }
+        .image-container {
+            display: block;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+        .instruction {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function changeImage(id, newSrc) {
+            document.getElementById(id).src = newSrc;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <p class="instruction">Click the images to see Christian Bale's "Method Body Acting"!</p>
+
+    <div class="image-container">
+        <img id="BaleProfile" src="BaleProfile.jpg" alt="Bale" onclick="changeImage('BaleProfile', 'BaleMachinist.jpg')">
+        <p>Over the past 20 years, Christian Bale has undergone major body transformations to get him more inline with the characters he is portraying. <br> From American Psycho (190lbs) to The Machinist (120lbs), Bale lost 70lbs to play this role.</p>
+    </div>
+
+    <div class="image-container">
+        <img id="BaleBatman" src="BaleBatman.jpg" alt="Bale" onclick="changeImage('BaleBatman', 'BaleVice.jpg')">
+        <p>After being cast as Batman, Bale would go on to gain 100lbs to be the Superhero. Once it came time to suit up though,<br> he had to shed 30lbs to comfortably fit. But going from Batman (190lbs) to VP Dick Cheney in Vice (225lbs),<br> Bale has gone on record saying he would eat a whole pie a day to achieve this unhealthy weight gain.</p>
+    </div>
+
+</body>
+</html>
