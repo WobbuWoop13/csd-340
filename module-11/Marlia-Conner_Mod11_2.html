@@ -1,0 +1,90 @@
+<!-- Kyle Marlia-Conner -->
+<!-- 03/02/2025 -->
+<!-- Assignment 11.2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+        ul {
+            text-align: left;
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    
+    <div class="container">
+        <p>Enter a task and manage your to-do list.</p>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add</button>
+        <button onclick="deleteLastTask()">Delete Last Entry</button>
+        <button onclick="displayTasks()">Display</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            let taskInput = document.getElementById("taskInput");
+            let task = taskInput.value.trim();
+            if (task !== "") {
+                tasks.push(task);
+                alert(`Added: ${task}`);
+                taskInput.value = "";
+            } else {
+                alert("Please enter a task before adding.");
+            }
+        }
+
+        function deleteLastTask() {
+            if (tasks.length > 0) {
+                let removedTask = tasks.pop();
+                alert(`Deleted: ${removedTask}`);
+            } else {
+                alert("No tasks to delete.");
+            }
+        }
+
+        function displayTasks() {
+            let taskList = document.getElementById("taskList");
+            taskList.innerHTML = "";
+            tasks.forEach((task, index) => {
+                let li = document.createElement("li");
+                li.textContent = `${index + 1}. ${task}`;
+                taskList.appendChild(li);
+            });
+        }
+    </script>
+
+    <div class="bottom-div">
+        <a href="https://wobbuwoop13.github.io/csd-340/">Back to Landing Page</a>
+    </div>
+    
+</body>
+</html>
