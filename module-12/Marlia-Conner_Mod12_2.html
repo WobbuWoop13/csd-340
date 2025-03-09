@@ -1,0 +1,90 @@
+<!-- Kyle Marlia-Conner -->
+<!-- 03/08/2025 -->
+<!-- Assignment 12.2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Kyle Marlia-Conner">
+  <meta name="description" content="Assignment 12.2">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Web Development">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <link rel="stylesheet" href="Marlia-Conner_Mod12_2.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+    <div class="side-by-side">
+      <div class="left-div">
+        <h3>Top 10 Favorite Books</h3>
+
+        <!-- Buttons -->
+        <div class="button-container">
+          <button onclick="displayBooks('asc')">Top to Bottom</button>
+          <button onclick="displayBooks('desc')">Bottom to Top</button>
+        </div>
+
+        <ul id="bookList">
+        </ul>
+      </div>
+
+      <div class="right-div">
+        <h3>5 Things I’ve Learned Since the Course Started</h3>
+        <ul>
+          <li>I. Item 1</li>
+          <li>II. Item 2</li>
+          <li>III. Item 3</li>
+          <li>IV. Item 4</li>
+          <li>V. Item 5</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom-div">
+      <a href="https://wobbuwoop13.github.io/csd-340/">Return to Landing Page</a>
+    </div>
+  </div>
+
+  <script>
+    const books = [
+      { rank: 1, title: "Beastie Boys Book" },
+      { rank: 2, title: "Blood, Sweat, and Chrome: The Wild and True Story of Mad Max: Fury Road" },
+      { rank: 3, title: "Oscar Wars" },
+      { rank: 4, title: "S." },
+      { rank: 5, title: "Play Nice" },
+      { rank: 6, title: "Blood, Sweat, and Pixels" },
+      { rank: 7, title: "The Martian" },
+      { rank: 8, title: "Project Hail Mary" },
+      { rank: 9, title: "The Men Who Would Be King" },
+      { rank: 10, title: "This is How You Make a Movie" }
+    ];
+
+    // Display books in ascending or descending order by rank (Had a problem with duplicated numbers and not changing properly)
+    function displayBooks(order) {
+      const bookList = document.getElementById("bookList");
+      bookList.innerHTML = "";
+
+      let sorted = [...books];
+      if (order === "asc") {
+        // Ascending: 1 -> 10
+        sorted.sort((a, b) => a.rank - b.rank);
+      } else {
+        // Descending: 10 -> 1
+        sorted.sort((a, b) => b.rank - a.rank);
+      }
+
+      // Create list of books
+      sorted.forEach((book) => {
+        let li = document.createElement("li");
+        li.textContent = `${book.rank}. ${book.title}`;
+        bookList.appendChild(li);
+      });
+    }
+
+    displayBooks("asc");
+  </script>
+</body>
+</html>

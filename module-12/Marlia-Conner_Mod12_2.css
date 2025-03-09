@@ -1,0 +1,105 @@
+/* Kyle Marlia-Conner */
+/* 03/08/2025 */
+/* Assignment 12.2 */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .side-by-side {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .left-div {
+    width: 45%;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 15px;
+  }
+  
+  .right-div {
+    width: 45%;
+    padding: 10px;
+    border: 2px dashed red;
+    border-radius: 15px;
+  }
+  
+  h3 {
+    font-weight: 500;
+  }
+  
+  ol {
+    list-style-position: inside;
+    list-style-type: decimal;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+  }
+  
+  ul {
+    list-style-position: inside;
+    list-style-type: upper-roman;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+  }
+  
+  #bookList {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    border: none;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+  }
+
+  button {
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: lightgray;
+  }
+
+  .bottom-div {
+    width: 100%;
+    margin-top: 60px;
+    float: right;
+    margin-bottom: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
